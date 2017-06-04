@@ -1,0 +1,85 @@
+footer {
+	p {
+		color: $white;
+	}
+
+	ul {
+		padding: 0;
+		list-style: none;
+
+		li {
+			a {
+				color: $white;
+
+				&:hover {
+					color: $primary;
+				}
+			}
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 2px 0 0;
+			}
+
+			i {
+				display: inline-block;
+				vertical-align: middle;
+				width: 16px;
+				text-align: center;
+				margin: 0 4px 0 0;
+			}
+		}
+	}
+
+	.col-md-9 {
+		padding: 0;
+	}
+
+	.col-md-3 {
+		padding: 0;
+	}
+
+	.nav-top {
+		padding: 3.25rem 0;
+		background-color: $semi-gray;
+	}
+	
+	.nav-bottom {
+		background-color: $dark-gray;
+		padding: 1.25rem 0;
+
+		.copyright {
+			margin: 0;
+			font-size: 0.7em;
+			letter-spacing: 0.5pt;
+		}
+	}
+
+	.label-title {
+		color: $text;
+	}
+
+	.call-us {
+		li {
+			margin: 0 0 4px;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+
+	.social {
+		li {
+			span {
+				padding: 0;
+			}
+			
+			i {
+				font-size: 1.4em;
+				width: 18px;
+			}
+		}
+	}
+}

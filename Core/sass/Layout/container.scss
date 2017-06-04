@@ -1,0 +1,185 @@
+:root {
+	// background-color: $bg-default;
+}
+
+body {
+	font-size: 14px;
+    color: $text-darkgray;
+    font-family: poppins-light;
+    background-color: transparent;
+    position: relative;
+}
+
+p {
+	font-size: 1em;
+	line-height: 180%;
+	letter-spacing: 0.5pt;
+	// margin: 0 0 20px;
+}
+
+a {
+	text-decoration: none;
+	color: $primary;
+	transition: all 0.3s linear;
+
+	&:hover {
+		color: $secondary;
+		text-decoration: none;
+	}
+
+	&:focus {
+		text-decoration: none;
+		outline: 0;
+		color: inherit;
+	}
+}
+
+ol,
+ul {
+    padding: 0 0 0 16px;
+	
+	&.flat {
+		margin: 0;
+
+		li {
+			display: inline-block;
+			margin: 0 8px 0 0;
+
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+video {
+	max-width: 100%;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+.hide {
+	display: none!important;
+}
+
+.show-mobile {
+	display: block!important;
+
+	@include breakpoint(wide) {
+		display: none!important;
+	}
+}
+
+.show-desktop {
+	display: none!important;
+
+
+	@include breakpoint(wide) {
+		display: block!important;
+	}
+}
+
+.row {
+	margin: 0;
+}
+
+.container {
+	padding: 0;
+}
+
+.label-title {
+	text-transform: uppercase;
+    margin: 0 0 16px;
+    letter-spacing: 1pt;
+    line-height: 130%;
+    display: inline-block;
+    position: relative;
+    font-size: 0.9em;
+    color: $text-darker;
+    font-family: poppins-regular;
+
+    &:after {
+		content: "";
+		position: relative;
+		height: 1px;
+		background-color: currentColor;
+		display: inline-block;
+		width: 40px;
+		bottom: 4px;
+		left: 4px;
+    }
+}
+
+.bg-outline {
+	&:hover {
+		&:before {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&:before {
+		content: '';
+		top: 50%;
+		left: 50%;
+		opacity: 0;
+		pointer-events: none;
+		visibility: hidden;
+		z-index: 15;
+		display: block;
+		position: absolute;
+		border: 1px solid $white;
+		z-index: 1;
+		width: calc(100% - 40px);
+		height: calc(100% - 40px);
+		transform: translate(-50%, -50%);
+		transition: all 0.3s linear;
+	}
+}
+
+.content-page {
+	padding: 90px 0 0;
+
+	@include breakpoint(desktop) {
+		padding: 130px 0 0;
+	}
+}
+
+.scroll-to-top {
+	position: fixed;
+	top: initial;
+	left: initial;
+	font-size: 0.8em;
+	bottom: 1.875rem;
+	right: 1.875rem;
+	color: $dark-gray;
+	text-align: center;
+	display: inline-block;
+	display: none;
+	z-index: 999999;
+
+	i {
+		width: 20px;
+		height: 20px;
+		vertical-align: middle;
+		line-height: 18px;
+		font-size: 1.5em;
+	}
+
+	span {
+		display: block;
+		margin: 10px 0 0;
+		text-transform: uppercase;
+		font-family: poppins-regular;
+	}
+
+    // &:hover {
+    // 	color: $white;
+    // }
+}

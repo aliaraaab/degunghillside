@@ -1,0 +1,33 @@
+.gallery {
+	&.room-facility {
+		padding: 2.25rem 0;
+		
+		.image-area {
+    		@include breakpoint(desktop) {
+				margin-left: 50%;
+    		}
+
+			.gallery-slide {
+				.image {
+					height: 600px;
+				}
+			}
+		}
+
+		.thumbnail-info {
+			margin: 0 0 3.25rem;
+
+			&.right-style {
+				.image-area {
+					@include breakpoint(desktop) {
+						margin-left: 0;
+		    		}
+				}
+			}
+
+			&:last-child {
+				margin: 0
+			}
+		}
+	}
+}

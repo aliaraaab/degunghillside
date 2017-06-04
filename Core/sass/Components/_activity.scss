@@ -1,0 +1,82 @@
+.activity {
+	.list-activity {
+		padding: 20px;
+		text-align: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		.wrapper {
+			position: relative;
+			height: 150px;
+		}
+
+		h3 {
+			color: $white;
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			bottom: initial;
+			transform: translate(0, -50%);
+			z-index: 1;
+			font-size: 1.7em;
+
+			small {
+				color: $white;
+			}
+		}
+
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, 0.6);
+			z-index: 0;
+		}
+
+		&.all-facility {
+			background-color: $primary;
+			padding: 0;
+
+			a {
+				color: $white;
+				position: relative;
+				height: 190px;
+				display: block;
+				padding: 20px;
+				font-size: 1.7em;
+
+				span {
+					position: absolute;
+					top: 50%;
+					left: 0;
+					right: 0;
+					bottom: initial;
+					transform: translate(0, -50%);
+				}
+
+				strong {
+					font-weight: normal;
+					display: inline-block;
+					vertical-align: middle;
+					padding: 1px 0 0;
+				}
+
+				i {
+					width: 28px;
+					height: 28px;
+					line-height: 24px;
+					border: 1px solid $white;
+					font-size: 0.8em;
+					margin: 0 0 0 4px;
+					vertical-align: middle;
+					border-radius: 100%;
+				}
+			}
+		}
+	}
+}

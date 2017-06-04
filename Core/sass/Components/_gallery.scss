@@ -1,0 +1,212 @@
+.gallery {
+	padding: 6.25rem 0;
+
+	.thumbnail-info {
+		position: relative;
+
+		.info-thumb {
+			padding: 0;
+
+			@include breakpoint(desktop) {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				right: initial;
+				bottom: initial;
+				transform: translate(0, -50%);
+			}
+
+			h3 {
+				margin: 0 0 16px;
+				font-size: 2.6em;
+				line-height: 130%;
+				color: $text-darker;
+				font-family: poppins-regular;
+			}
+
+			.facility-list {
+				margin: 24px 0 0;
+
+				h5 {
+					font-size: 1.2em;
+					color: $black;
+					letter-spacing: 0.5pt;
+					margin: 0 0 8px;
+					font-family: poppins-regular;
+				}
+
+				.col-xs-6 {
+					p {
+						margin: 0;
+
+						i {
+							vertical-align: middle;
+							margin: 0 4px 0 0;
+						}
+
+						span {
+							display: inline-block;
+							vertical-align: middle;
+						}
+					}
+				}
+			}
+
+			.price-area {
+				margin: 32px 0 0;
+
+				.desc-price {
+					font-style: italic;
+					font-size: 0.8em;
+					color: $secondary;
+					margin: 5px 0 0;
+				}
+
+				.desc-info {
+					display: block;
+					font-size: 1em;
+					color: $secondary;
+					margin: 10px 0 0;
+				}
+			}
+
+			.link-area {
+				margin: 24px 0 0;
+				font-size: 1.2em;
+
+				a {
+					color: $primary;
+
+					&:hover {
+						i {
+							margin: 0 0 0 10px;
+						}
+					}
+				}
+
+				span {
+					display: inline-block;
+					vertical-align: middle;
+				}
+
+				i {
+					width: 20px;
+					height: 20px;
+					line-height: 16px;
+					border: 1px solid $primary;
+					font-size: 0.9em;
+					margin: 0 0 0 4px;
+					text-align: center;
+					vertical-align: middle;
+					border-radius: 100%;
+            		transition: margin cubic-bezier(0.455, 0.03, 0.515, 0.955) .3s;
+				}
+			}
+
+			.button-area {
+				margin: 32px 0 0;
+			}
+		}
+
+		&.right-style {
+			.info-thumb {
+				right: 0;
+				left: initial;
+			}
+
+			.image-area {
+				.wrapper {
+					padding: 0 8% 0 0;
+				}
+			}
+		}
+	}
+
+	.image-area {
+		padding: 0;
+
+		.wrapper {
+			@include breakpoint(desktop) {
+				padding: 0 0 0 8%;
+			}
+		}
+
+		.gallery-slide {
+			a {
+				display: block;
+				position: relative;
+
+				&:hover {
+					.hover-info {
+						opacity: 1;
+						visibility: visible;
+					}
+
+					.overlay {
+						opacity: 1;
+						visibility: visible;
+					}
+
+					.icon {
+						background-color: transparent;
+						top: 16px;
+						right: 16px;
+					}
+				}
+			}
+
+			.image {
+				display: block;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				height: 500px;
+			}
+
+			.icon {
+				position: absolute;
+				top: 0;
+				left: initial;
+				right: 0;
+				bottom: initial;
+				font-size: 2em;
+				color: $white;
+				padding: 16px;
+				background-color: rgba(0, 0, 0, 0.4);
+				z-index: 1;
+				transition: all 0.3s linear;
+			}
+
+			.hover-info {
+				position: absolute;
+				top: 50%;
+				left: 20px;
+				right: 20px;
+				bottom: initial;
+				z-index: 1;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				text-align: center;
+				font-size: 1.7em;
+				color: $white;
+				transition: all 0.3s linear;
+				transform: translate(0, -50%);
+			}
+
+			.overlay {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 0;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				background-color: rgba(0, 0, 0, 0.6);
+				transition: all 0.3s linear;
+			}
+		}
+	}
+}
