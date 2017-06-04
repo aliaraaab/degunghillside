@@ -8,6 +8,7 @@ body {
     font-family: poppins-light;
     background-color: transparent;
     position: relative;
+    letter-spacing: 0.3pt;
 }
 
 p {
@@ -30,7 +31,7 @@ a {
 	&:focus {
 		text-decoration: none;
 		outline: 0;
-		color: inherit;
+		color: $secondary;
 	}
 }
 
