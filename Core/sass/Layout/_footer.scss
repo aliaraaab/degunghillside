@@ -41,8 +41,16 @@ footer {
 	}
 
 	.nav-top {
-		padding: 3.25rem 0;
+		padding: 2rem 0;
 		background-color: $semi-gray;
+		
+		@include breakpoint(wide) {
+			padding: 3.25rem 0;
+		}
+
+		.col-md-9 {
+			margin: 0 0 24px;
+		}
 	}
 	
 	.nav-bottom {

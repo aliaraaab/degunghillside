@@ -60,16 +60,27 @@ input[type='button'].btn {
 
 .loadmore {
     text-align: center;
-    margin: 3.25rem 0;
+    margin: 2rem 0 0;
+    
+    @include breakpoint(wide) {
+        margin: 3.25rem 0;
+    }
 
     .button {
         color: $black;
         background-color: transparent;
         border: 1px solid $black;
+        width: 100%;
+        
+        @include breakpoint(wide) {
+            width: auto;
+        }
 
         &:hover {
-            background-color: $black;
+            background-color: $tosca;
+            border-color: $tosca;
             color: $white;
+            opacity: 1;
 
             &:focus {
                 color: $white;
@@ -77,7 +88,7 @@ input[type='button'].btn {
         }
 
         &:focus {
-            color: $black;
+            color: $tosca;
         }
     }
 }
@@ -93,9 +104,9 @@ input[type='button'].btn {
     min-width: 160px;
     transition: all 0.3s linear;
 
-    @include breakpoint(desktop) {
+    @include breakpoint(wide) {
         min-width: 236px;
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
 
 

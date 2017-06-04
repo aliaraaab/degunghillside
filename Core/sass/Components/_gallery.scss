@@ -1,13 +1,19 @@
 .gallery {
-	padding: 6.25rem 0;
+	padding: 2rem 0;
+	
+	@include breakpoint(wide) {
+		padding: 6.25rem 0;
+	}
 
 	.thumbnail-info {
 		position: relative;
 
 		.info-thumb {
 			padding: 0;
+			margin: 0 0 24px;
 
-			@include breakpoint(desktop) {
+			@include breakpoint(wide) {
+				margin: 0;
 				position: absolute;
 				top: 50%;
 				left: 0;
@@ -16,12 +22,14 @@
 				transform: translate(0, -50%);
 			}
 
-			h3 {
-				margin: 0 0 16px;
-				font-size: 2.6em;
-				line-height: 130%;
-				color: $text-darker;
-				font-family: poppins-regular;
+			.info-detail {
+				p {
+					font-size: 0.9em;
+					
+					@include breakpoint(wide) {
+						font-size: 1em;
+					}
+				}
 			}
 
 			.facility-list {
@@ -35,7 +43,15 @@
 					font-family: poppins-regular;
 				}
 
-				.col-xs-6 {
+				.col-sm-6 {
+					padding: 0;
+
+					.wrapper {
+						@include breakpoint(wide) {
+							padding: 0 4px;
+						}
+					}
+
 					p {
 						margin: 0;
 
@@ -58,16 +74,15 @@
 				.desc-price {
 					font-style: italic;
 					font-size: 0.8em;
-					color: $secondary;
 					margin: 5px 0 0;
 				    letter-spacing: 0.5pt;
 				}
 
 				.desc-info {
 					display: block;
-					font-size: 1em;
-					color: $secondary;
+					font-size: 0.8em;
 					margin: 10px 0 0;
+					line-height: 180%;
 				}
 			}
 
@@ -76,7 +91,7 @@
 				font-size: 1.2em;
 
 				a {
-					color: $primary;
+					color: $tosca;
 
 					&:hover {
 						i {
@@ -94,7 +109,7 @@
 					width: 20px;
 					height: 20px;
 					line-height: 16px;
-					border: 1px solid $primary;
+					border: 1px solid $tosca;
 					font-size: 0.9em;
 					margin: 0 0 0 4px;
 					text-align: center;
@@ -105,19 +120,42 @@
 			}
 
 			.button-area {
-				margin: 32px 0 0;
+			    margin: 16px 0 0;
+
+			    .button {
+			    	width: 100%;
+
+					@include breakpoint(wide) {
+						width: auto;
+					}
+			    }
 			}
 		}
 
 		&.right-style {
 			.info-thumb {
-				right: 0;
-				left: initial;
+				margin: 0 0 24px;
+					margin: 0;
+				
+				@include breakpoint(wide) {
+					margin: 0;
+					right: 0;
+					left: initial;
+				}
 			}
 
 			.image-area {
+				margin: 0 0 32px;
+				// margin: 0;
+			
+				@include breakpoint(wide) {
+					margin: 0;
+				}
+				
 				.wrapper {
-					padding: 0 8% 0 0;
+					@include breakpoint(wide) {
+						padding: 0 8% 0 0;
+					}
 				}
 			}
 		}
@@ -127,7 +165,7 @@
 		padding: 0;
 
 		.wrapper {
-			@include breakpoint(desktop) {
+			@include breakpoint(wide) {
 				padding: 0 0 0 8%;
 			}
 		}
@@ -137,21 +175,28 @@
 				display: block;
 				position: relative;
 
+
 				&:hover {
 					.hover-info {
-						opacity: 1;
-						visibility: visible;
+						@include breakpoint(wide) {
+							opacity: 1;
+							visibility: visible;
+						}
 					}
 
 					.overlay {
-						opacity: 1;
-						visibility: visible;
+						@include breakpoint(wide) {
+							opacity: 1;
+							visibility: visible;
+						}
 					}
 
 					.icon {
-						background-color: transparent;
-						top: 16px;
-						right: 16px;
+						@include breakpoint(wide) {
+							background-color: transparent;
+							top: 16px;
+							right: 16px;
+						}
 					}
 				}
 			}
@@ -161,7 +206,11 @@
 				background-size: cover;
 				background-repeat: no-repeat;
 				background-position: center;
-				height: 500px;
+				height: 240px;
+				
+				@include breakpoint(wide) {
+					height: 500px;
+				}
 			}
 
 			.icon {

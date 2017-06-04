@@ -15,24 +15,24 @@
 			// 	topSpacing:0
 			// });
 
-			var lastScroll = 300;
-			$(window).scroll(function(event){
-				//Sets the current scroll position
-				var st = $(this).scrollTop();
-				
-				if(st < 50) {
-					$('body').addClass('onScroll');
-				} else {
-					$('body').removeClass('onScroll');
-				}
-
-				//Updates scroll position
-				lastScroll = st;
-			});
-
 		} else {
 			
 		}
 	}
+
+	var lastScroll = 300;
+	$(window).scroll(function(event){
+		//Sets the current scroll position
+		var st = $(this).scrollTop();
+		
+		if(st < 50) {
+			$('body').addClass('onScroll');
+		} else {
+			$('body').removeClass('onScroll');
+		}
+
+		//Updates scroll position
+		lastScroll = st;
+	});
 
 })(jQuery);

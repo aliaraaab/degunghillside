@@ -13,6 +13,7 @@
 
 		h3 {
 			color: $white;
+			line-height: 130%;
 			margin: 0;
 			position: absolute;
 			top: 50%;
@@ -21,7 +22,11 @@
 			bottom: initial;
 			transform: translate(0, -50%);
 			z-index: 1;
-			font-size: 1.7em;
+			font-size: 1.3em;
+			
+			@include breakpoint(wide) {
+				font-size: 1.7em;
+			}
 
 			small {
 				color: $white;
@@ -39,7 +44,7 @@
 		}
 
 		&.all-facility {
-			background-color: $primary;
+			background-color: $tosca;
 			padding: 0;
 
 			a {
@@ -48,15 +53,24 @@
 				height: 190px;
 				display: block;
 				padding: 20px;
-				font-size: 1.7em;
+				font-size: 1.3em;
+				
+				@include breakpoint(wide) {
+					font-size: 1.7em;
+				}
 
 				span {
+					padding: 0 10px;
 					position: absolute;
 					top: 50%;
 					left: 0;
 					right: 0;
 					bottom: initial;
 					transform: translate(0, -50%);
+
+					@include breakpoint(wide) {
+						padding: 0;
+					}
 				}
 
 				strong {
@@ -67,14 +81,21 @@
 				}
 
 				i {
-					width: 28px;
-					height: 28px;
-					line-height: 24px;
 					border: 1px solid $white;
 					font-size: 0.8em;
-					margin: 0 0 0 4px;
 					vertical-align: middle;
 					border-radius: 100%;
+					width: 22px;
+					height: 22px;
+					line-height: 18px;
+					margin: 0 0 0 2px;
+
+					@include breakpoint(wide) {
+						width: 28px;
+						height: 28px;
+						line-height: 24px;
+						margin: 0 0 0 4px;
+					}
 				}
 			}
 		}

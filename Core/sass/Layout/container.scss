@@ -91,7 +91,11 @@ iframe {
 }
 
 .container {
-	padding: 0;
+	padding: 0 16px;
+
+	@include breakpoint(wide) {
+		padding: 0;
+	}
 }
 
 .label-title {
@@ -117,11 +121,25 @@ iframe {
     }
 }
 
+.title {
+	margin: 0 0 16px;
+	font-size: 1.8em;
+	line-height: 130%;
+	color: $text-darker;
+	font-family: poppins-regular;
+	
+	@include breakpoint(wide) {
+		font-size: 2.6em;
+	}
+}
+
 .bg-outline {
 	&:hover {
 		&:before {
-			opacity: 1;
-			visibility: visible;
+			@include breakpoint(wide) {
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 
@@ -147,8 +165,64 @@ iframe {
 .content-page {
 	padding: 90px 0 0;
 
-	@include breakpoint(desktop) {
+	@include breakpoint(wide) {
 		padding: 130px 0 0;
+	}
+}
+
+.cover {
+	position: relative;
+	height: 150px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	
+	@include breakpoint(tablet) {
+		height: 300px;
+	}
+
+	.desc {
+		position: absolute;
+		top: initial;
+		left: 16px;
+		right: 16px;
+		bottom: 10%;
+		z-index: 1;
+
+		@include breakpoint(wide) {
+			left: 10%;
+			right: 10%;
+			bottom: 8%;
+		}
+
+		h3 {
+			text-transform: uppercase;
+			color: $white;
+			margin: 0;
+			font-family: poppins-medium;
+			font-size: 1.6em;
+			line-height: 130%;
+			text-shadow: 0 1px 15px rgba(54,54,54,0.8);
+			
+			@include breakpoint(wide) {
+				font-size: 2.6em;
+			}
+		}
+	}
+
+	.label-title {
+		margin: 0 0 8px;
+		color: $white;
+	}
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.2);
+		z-index: 0;
 	}
 }
 
@@ -156,14 +230,24 @@ iframe {
 	position: fixed;
 	top: initial;
 	left: initial;
-	font-size: 0.8em;
 	bottom: 1.875rem;
-	right: 1.875rem;
-	color: $dark-gray;
+	right: 16px;
 	text-align: center;
 	display: inline-block;
 	display: none;
 	z-index: 999999;
+	background-color: rgba(0, 0, 0, 0.4);
+	padding: 5px 10px;
+	font-size: 0.7em;
+	color: $white;
+
+	@include breakpoint(wide) {
+		right: 1.875rem;
+		color: $dark-gray;
+		font-size: 0.8em;
+		padding: 0;
+		background-color: transparent;
+	}
 
 	i {
 		width: 20px;
@@ -175,12 +259,75 @@ iframe {
 
 	span {
 		display: block;
-		margin: 10px 0 0;
+		margin: 6px 0 2px;
 		text-transform: uppercase;
 		font-family: poppins-regular;
+		
+		@include breakpoint(wide) {
+			margin: 10px 0 0;
+		}
+	}
+}
+
+.jcf-select {
+	display: block;
+	outline: 0;
+	box-shadow: none;
+	border-radius: 0;
+	border-color: $black;
+	padding: 11px 32px 10px 10px;
+	height: auto;
+	color: $black;
+	cursor: pointer;
+
+	@include breakpoint(tablet) {
+		padding: 11px 42px 10px 20px;
 	}
 
-    // &:hover {
-    // 	color: $white;
-    // }
+
+	.jcf-select-text {
+		font-size: 1em;
+		margin: 0;
+		cursor: pointer;
+
+		@include breakpoint(tablet) {
+			font-size: 1.2em;				
+		}
+	}
+
+	.jcf-select-opener {
+		background-color: transparent;
+	}
+}
+
+.jcf-focus, 
+.jcf-focus * {
+	border-color: $tosca!important;
+}
+
+.jcf-list {
+	.jcf-option {
+		font-size: 1.2em;
+		height: auto;
+		padding: 11px 20px 10px;
+		color: $black;
+	}
+}
+
+.jcf-select-drop {
+	.jcf-select-drop-content {
+		border-color: $tosca;
+	}
+
+	.jcf-hover {
+		background-color: $tosca;
+		color: $white;
+	}
+}
+
+.jcf-list-box {
+	.jcf-selected {
+		background-color: $tosca;
+		color: $white;
+	}
 }
