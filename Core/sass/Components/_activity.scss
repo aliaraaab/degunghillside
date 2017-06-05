@@ -8,7 +8,11 @@
 
 		.wrapper {
 			position: relative;
-			height: 150px;
+			height: 120px;
+		
+			@include breakpoint(wide) {
+				height: 150px;
+			}
 		}
 
 		h3 {
@@ -50,12 +54,13 @@
 			a {
 				color: $white;
 				position: relative;
-				height: 190px;
+				height: 160px;
 				display: block;
 				padding: 20px;
 				font-size: 1.3em;
 				
 				@include breakpoint(wide) {
+					height: 190px;
 					font-size: 1.7em;
 				}
 
