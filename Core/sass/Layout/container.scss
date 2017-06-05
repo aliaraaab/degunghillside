@@ -24,14 +24,14 @@ a {
 	transition: all 0.3s linear;
 
 	&:hover {
-		color: $secondary;
+		color: $tosca;
 		text-decoration: none;
 	}
 
 	&:focus {
 		text-decoration: none;
 		outline: 0;
-		color: $secondary;
+		color: $tosca;
 	}
 }
 
@@ -243,7 +243,7 @@ iframe {
 
 	@include breakpoint(wide) {
 		right: 1.875rem;
-		color: $dark-gray;
+		color: $tosca;
 		font-size: 0.8em;
 		padding: 0;
 		background-color: transparent;
@@ -277,7 +277,7 @@ iframe {
 	border-color: $black;
 	padding: 11px 32px 10px 10px;
 	height: auto;
-	color: $black;
+	color: $text-darkgray;
 	cursor: pointer;
 
 	@include breakpoint(tablet) {
@@ -310,7 +310,7 @@ iframe {
 		font-size: 1.2em;
 		height: auto;
 		padding: 11px 20px 10px;
-		color: $black;
+		color: $text-darkgray;
 	}
 }
 
