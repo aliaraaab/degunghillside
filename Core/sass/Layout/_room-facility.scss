@@ -29,7 +29,6 @@
 				}
 
 				.image-area {
-					// margin: 0 0 32px;
 					margin: 0;
 				
 					@include breakpoint(wide) {
@@ -111,29 +110,39 @@
 
 					&:hover {
 						.hover-info {
-							opacity: 1;
-							visibility: visible;
+							@include breakpoint(wide) {
+								opacity: 1;
+								visibility: visible;
+							}
 						}
 
 						.overlay {
-							opacity: 1;
-							visibility: visible;
+							@include breakpoint(wide) {
+								opacity: 1;
+								visibility: visible;
+							}
 						}
 
 						.icon {
-							background-color: transparent;
-							top: 16px;
-							right: 16px;
+							@include breakpoint(wide) {
+								background-color: transparent;
+								top: 16px;
+								right: 16px;
+							}
 						}
 					}
 				}
 
 				.image {
-					height: 280px;
+					height: 200px;
 					display: block;
 					background-repeat: no-repeat;
 					background-position: center;
 					background-size: cover;
+					
+					@include breakpoint(wide) {
+						height: 280px;
+					}
 				}
 
 				.icon {
@@ -142,12 +151,17 @@
 					left: initial;
 					right: 0;
 					bottom: initial;
-					font-size: 2em;
+					font-size: 1.4em;
 					color: $white;
-					padding: 16px;
+					padding: 12px;
 					background-color: rgba(0, 0, 0, 0.4);
 					z-index: 1;
 					transition: all 0.3s linear;
+
+					@include breakpoint(wide) {
+						padding: 16px;
+						font-size: 2em;
+					}
 				}
 
 				.hover-info {

@@ -147,7 +147,7 @@ header {
 	left: 0;
 	right: 0;
 	bottom: initial;
-	z-index: 2;
+	z-index: 3;
 
 	@include breakpoint(wide) {
 		box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);

@@ -38,52 +38,52 @@
 					border-radius: 100%;
 
 					&.active {
-						background: $primary;
-						color: #fff;
+						background: $tosca;
+						color: $white;
 						border: 0;
 						box-shadow: none;
 
 						&.active {
-							background: $primary;
-							color: #fff;
+							background: $tosca;
+							color: $white;
 						}
 
 						&:hover {
 							&.active {
-								background: $primary;
-								color: #fff;	
+								background: $tosca;
+								color: $white;	
 							}
 						}
 					}
 				}
 
 				&.today {
-					background: $primary;
-					color: #fff;
+					background: $tosca;
+					color: $white;
 
 					&:hover {
 						&:hover {
-							background: $primary;
-							color: #fff;	
+							background: $tosca;
+							color: $white;	
 						}
 					}
 				}
 
 				&.active {
-					background: $secondary;
-					color: #fff;
+					background: $primary;
+					color: $white;
 					border: 0;
 					box-shadow: none;
 
 					&.active {
-						background: $secondary;
-						color: #fff;
+						background: $primary;
+						color: $white;
 					}
 
 					&:hover {
 						&.active {
-							background: $secondary;
-							color: #fff;	
+							background: $primary;
+							color: $white;	
 						}
 					}
 				}

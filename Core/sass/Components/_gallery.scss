@@ -206,7 +206,7 @@
 				background-size: cover;
 				background-repeat: no-repeat;
 				background-position: center;
-				height: 240px;
+				height: 200px;
 				
 				@include breakpoint(wide) {
 					height: 500px;
@@ -219,12 +219,17 @@
 				left: initial;
 				right: 0;
 				bottom: initial;
-				font-size: 2em;
+				font-size: 1.4em;
 				color: $white;
-				padding: 16px;
+				padding: 12px;
 				background-color: rgba(0, 0, 0, 0.4);
 				z-index: 1;
 				transition: all 0.3s linear;
+				
+				@include breakpoint(wide) {
+					padding: 16px;
+					font-size: 2em;
+				}
 			}
 
 			.hover-info {
