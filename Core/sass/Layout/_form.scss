@@ -26,9 +26,10 @@
 			padding: 11px 10px 10px;
 			height: auto;
 			color: $text-darkgray;
+			font-size: 16px;			
 
 			@include breakpoint(tablet) {
-				font-size: 1.2em;				
+				font-size: 1.2em;			
 				padding: 11px 20px 10px;
 			}
 
@@ -61,7 +62,7 @@
 			position: relative;
 			font-size: 0.9em;
 			color: $text-darker;
-			font-family: poppins-medium;
+			font-family: poppins-regular;
 		}
 
 		textarea {

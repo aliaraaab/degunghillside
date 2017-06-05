@@ -4,6 +4,7 @@
         format: 'dd/mm/yyyy',
         startDate: '1d',
         todayHighlight: true,
+        autoclose: true,
         disableTouchKeyboard: 'true',
         templates: {
                         leftArrow: '<i class="fa fa-caret-left"></i>',
