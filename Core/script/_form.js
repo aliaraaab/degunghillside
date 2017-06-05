@@ -34,25 +34,6 @@
             }
         },
 
-  //       messages: {
-		// 	firstname: "",
-  //           lastname: "",
-  //           company: "",
-  //           telephone: "",
-  //           gender: "",
-  //           city: "",
-  //           stated: "",
-  //           zip: "",
-  //           email: "",
-  //           password: "",
-  //           cardholder: "",
-  //           cardnumber: "",
-  //           payment: "",
-  //           expiration_month: "",
-  //           expiration_year: "",
-  //           ccv2: ""
-		// },
-
         highlight: function(element) {
             $(element).closest('.form-group').addClass('has-error');
         },
