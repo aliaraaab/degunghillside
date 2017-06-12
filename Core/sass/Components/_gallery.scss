@@ -10,7 +10,6 @@
 
 		.info-thumb {
 			padding: 0;
-			margin: 0 0 24px;
 
 			@include breakpoint(wide) {
 				margin: 0;
@@ -33,14 +32,18 @@
 			}
 
 			.facility-list {
-				margin: 24px 0 0;
+				margin: 16px 0 0;
 
 				h5 {
-					font-size: 1.2em;
+					font-size: 1.1em;
 					color: $black;
 					letter-spacing: 0.5pt;
 					margin: 0 0 8px;
 					font-family: poppins-regular;
+					
+					@include breakpoint(wide) {
+						font-size: 1.2em;
+					}
 				}
 
 				.col-sm-6 {
@@ -54,6 +57,7 @@
 
 					p {
 						margin: 0;
+						font-size: 0.9em;
 
 						i {
 							vertical-align: middle;
@@ -94,7 +98,10 @@
 					color: $tosca;
 
 					&:hover {
+    					color: $secondary;
+    					
 						i {
+	    					border-color: $secondary;
 							margin: 0 0 0 10px;
 						}
 					}
@@ -145,7 +152,8 @@
 			}
 
 			.image-area {
-				margin: 0 0 32px;
+				// margin: 0 0 32px;
+				margin: 0 0 24px;
 				// margin: 0;
 			
 				@include breakpoint(wide) {
@@ -163,6 +171,11 @@
 
 	.image-area {
 		padding: 0;
+		margin: 0 0 24px;
+
+		@include breakpoint(wide) {
+			margin: 0 0 0 50%;
+		}
 
 		.wrapper {
 			@include breakpoint(wide) {
@@ -170,6 +183,7 @@
 			}
 		}
 
+		.gallery-image,
 		.gallery-slide {
 			a {
 				display: block;
@@ -207,9 +221,12 @@
 				background-repeat: no-repeat;
 				background-position: center;
 				height: 200px;
+				height: 0;
+				padding: 0 0 60%;
 				
 				@include breakpoint(wide) {
-					height: 500px;
+					padding: 0 0 65%;
+					// height: 500px;
 				}
 			}
 
@@ -267,10 +284,11 @@
 }
 
 .gallery-section {
-	padding: 2.25rem 0;
+	padding: 2.25rem 0 4.25rem;
 
 	.title-area {
 		margin: 0 0 16px;
+		position: relative;
 
 		.label-title {
 			margin: 0;
@@ -282,6 +300,56 @@
 
 			&:after {
 				bottom: 8px;
+			}
+		}
+
+		.more {
+			font-size: 0.9em;
+			text-transform: uppercase;
+			font-family: poppins-regular;
+			letter-spacing: 0.5pt;
+			color: $tosca;
+			position: absolute;
+			top: 50%;
+			bottom: initial;
+			right: 0;
+			left: initial;
+			transform: translate(0 , -50%);
+
+			@include breakpoint(tablet) {
+				font-size: 1em;
+			}
+
+			span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			i {
+				font-size: 1.1em;
+				width: 18px;
+				height: 18px;
+				line-height: 14px;
+				border: 1px solid $tosca;
+				margin: -2px 0 0 4px;
+				text-align: center;
+				vertical-align: middle;
+				border-radius: 100%;
+
+				@include breakpoint(tablet) {
+					width: 20px;
+					height: 20px;
+					font-size: 1em;
+					line-height: 16px;
+				}
+			}
+
+			&:hover {
+				color: $secondary;
+
+				i {
+					border-color: $secondary;
+				}
 			}
 		}
 	}
@@ -319,7 +387,7 @@
 		}
 
 		.image {
-			padding: 0 0 100%;
+			padding: 0 0 80%;
 			position: relative;
 			display: block;
 			background-repeat: no-repeat;

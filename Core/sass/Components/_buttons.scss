@@ -104,6 +104,7 @@ input[type='button'].btn {
     min-width: 160px;
     transition: all 0.3s linear;
     font-size: 16px;
+    font-family: poppins-medium;
 
     @include breakpoint(wide) {
         min-width: 236px;

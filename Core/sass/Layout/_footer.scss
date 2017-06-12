@@ -48,8 +48,65 @@ footer {
 			padding: 3.25rem 0;
 		}
 
-		.col-md-9 {
+		.col-md-8 {
 			margin: 0 0 24px;
+			padding: 0;
+			
+			@include breakpoint(tablet) {
+				margin: 0;
+				padding: 0 15px;
+			}
+		}
+
+		.col-md-4 {
+			padding: 0;
+
+			@include breakpoint(tablet) {
+				padding: 0 15px;
+			}
+		}
+
+		.nav-group {
+			margin: 0 0 24px;
+
+			&:last-child {
+				margin: 0;
+			}
+
+			.form-newsletter {
+				position: relative;
+
+				input[type="text"] {
+					width: 100%;
+					background-color: rgba(255, 255, 255, 0.9);
+					padding: 8px 44px 8px 16px;
+					color: #6b6c6e;
+					outline: 0;
+					border: 0;
+					font-family: poppins-regular;
+				}
+
+				button {
+					position: absolute;
+					top: 50%;
+					bottom: initial;
+					right: 16px;
+					left: initial;
+					cursor: pointer;
+				    line-height: 100%;
+					transition: all 0.3s linear;
+					transform: translate(0, -50%);
+
+					&:hover {
+						color: $tosca;
+					}
+				}
+
+				i {
+					font-size: 1.4em;
+					line-height: 100%;
+				}
+			}
 		}
 	}
 	
@@ -69,6 +126,8 @@ footer {
 	}
 
 	.call-us {
+		margin: 0;
+		
 		li {
 			margin: 0 0 4px;
 
@@ -79,6 +138,8 @@ footer {
 	}
 
 	.social {
+		margin: 0;
+
 		li {
 			span {
 				padding: 0;

@@ -3,38 +3,42 @@
 		padding: 2.25rem 0;
 
 		.image-area {
-    		@include breakpoint(wide) {
-				margin-left: 50%;
-    		}
+    // 		@include breakpoint(wide) {
+				// margin-left: 50%;
+    // 		}
 
 			.gallery-slide {
 				.image {
 					@include breakpoint(wide) {
-						height: 600px;
+						// height: 600px;
 					}
 				}
 			}
 		}
 
 		.thumbnail-info {
-			margin: 0 0 3.25rem;
+			margin: 0 0 2rem;
+
+			@include breakpoint(wide) {
+				margin: 0 0 3rem;
+			}
 
 			&.right-style {
 				.info-thumb {
-					margin: 0 0 24px;
+					// margin: 0 0 24px;
 					
 					@include breakpoint(wide) {
 						margin: 0;
 					}
 				}
 
-				.image-area {
-					margin: 0;
+				// .image-area {
+				// 	margin: 0;
 				
-					@include breakpoint(wide) {
-						margin: 0;
-					}
-				}
+				// 	@include breakpoint(wide) {
+				// 		margin: 0;
+				// 	}
+				// }
 			}
 
 
@@ -49,17 +53,18 @@
 .room-facility {
 	padding: 2.25rem 0;
 
+	.title {
+		margin: 0;
+		font-size: 1.4em;
+		margin: 0 0 10px;
+		
+		@include breakpoint(wide) {
+			font-size: 1.8em;
+		}
+	}
+
 	.title-area {
 		margin: 0 0 16px;
-
-		.title {
-			margin: 0;
-			font-size: 2.2em;
-			
-			@include breakpoint(wide) {
-				font-size: 2.2em;
-			}
-		}
 
 		.label-title {
 			margin: 0;

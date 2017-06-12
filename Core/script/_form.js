@@ -12,6 +12,14 @@
                     }
     });
 
+    $('.date-range .datepicker').each(function() {
+        $(this).datepicker('clearDates');
+    });
+
+    $('.input-daterange input').each(function() {
+        $(this).datepicker('clearDates');
+    });
+
     $(".booking-message").validate({
 		rules: {
             fullname: {
@@ -23,15 +31,16 @@
             phone: {
                 required: true
             },
-            date: {
-                required: true
-            },
             people: {
                 required: true
             },
             package: {
                 required: true
-            }
+            },
+        },
+        
+        groups: {
+            book_date: "start_date end_date"
         },
 
         highlight: function(element) {
@@ -45,7 +54,11 @@
         errorPlacement: function(error, element) {
             if(element.parent('.form-group').length) {
                 error.insertBefore(element);
-            } else {
+            } 
+            else if (element.attr("name") == "start_date" || element.attr("name") == "end_date") {
+                error.insertBefore(element.parent().parent());
+            }
+            else {
                 error.insertBefore(element);
             }
         },

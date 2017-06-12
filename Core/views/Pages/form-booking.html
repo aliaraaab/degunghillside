@@ -1,8 +1,8 @@
 
-@@include('../Shared/header.html')
+@@include('../Shared/header-home.html')
 
 
-<div class="content-page">
+<div class="full-page">
 	<section class="form-booking">
 		<div class="cover wow fadeInUp" style="background-image: url('assets/img/img-thumb1.jpg');">
 			<div class="desc">
@@ -32,9 +32,24 @@
 						<label for="phone">Phone Number</label>
 						<input type="text" class="form-control" placeholder="Phone Number" name="phone" required>
 					</div>
-					<div class="form-group">
+					<div class="form-group ">
 						<label for="date">Date</label>
-						<input type="text" class="form-control datepicker" placeholder="Date" name="date" required>
+						<!-- <input type="text" class="form-control datepicker" placeholder="Date" name="date" required> -->
+
+						<div class="row">
+							<div class="col-md-6 col-xs-6">
+								<div class="input-text">
+									<input type="text" class="form-control datepicker" placeholder="Start Date" name="start_date" required>
+									<i class="icon-down fa fa-angle-down"></i>
+								</div>
+							</div>
+							<div class="col-md-6 col-xs-6">
+								<div class="input-text">
+									<input type="text" class="form-control datepicker" placeholder="End Date" name="end_date" required>
+									<i class="icon-down fa fa-angle-down"></i>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="form-group">
 						<label for="people">Number of People</label>

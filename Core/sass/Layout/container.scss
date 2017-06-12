@@ -172,13 +172,14 @@ iframe {
 
 .cover {
 	position: relative;
-	height: 150px;
+    height: 0;
+    padding: 0 0 80%;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	
 	@include breakpoint(tablet) {
-		height: 300px;
+    	padding: 0 0 40%;
 	}
 
 	.desc {
@@ -230,7 +231,7 @@ iframe {
 	position: fixed;
 	top: initial;
 	left: initial;
-	bottom: 1.875rem;
+	bottom: 2.875rem;
 	right: 16px;
 	text-align: center;
 	display: inline-block;
@@ -240,9 +241,11 @@ iframe {
 	padding: 5px 10px;
 	font-size: 0.7em;
 	color: $white;
+	text-shadow: 0 1px 15px rgba(54,54,54,0.5);
 
 	@include breakpoint(wide) {
-		right: 1.875rem;
+		bottom: 1.875rem;
+		right: 14.875rem;
 		color: $tosca;
 		font-size: 0.8em;
 		padding: 0;
@@ -264,7 +267,126 @@ iframe {
 		font-family: poppins-regular;
 		
 		@include breakpoint(wide) {
-			margin: 10px 0 0;
+			margin: 8px 0 0;
+		}
+	}
+
+	&:hover {
+		color: $white;
+		
+		@include breakpoint(wide) {
+			color: $secondary;
+		}
+	}
+}
+
+.button-book {
+	position: fixed;
+	bottom: 0;
+	top: initial;
+	right: 0;
+	left: initial;
+	display: inline-block;
+	z-index: 2;
+	color: $white;
+	background-color: $secondary;
+	padding: 8px 16px;
+	box-shadow: 0 1px 15px rgba(54,54,54,0.5);
+
+	&:hover {
+		background-color: $tosca;
+		color: $white;
+	}
+
+	&:focus {
+		color: $white;
+    }
+
+	@include breakpoint(wide) {
+		font-size: 1.2em;
+		right: 1.875rem;
+		bottom: 1.875rem;
+	}
+
+	i {
+		vertical-align: middle;
+		font-size: 1.5em;
+		margin: 0 4px 0 0;
+	}
+
+	span {
+		margin: 4px 0 0;
+		text-transform: uppercase;
+		font-family: poppins-regular;
+		vertical-align: middle;
+		display: inline-block;
+		
+		// @include breakpoint(wide) {
+		// 	margin: 10px 0 0;
+		// }
+	}
+}
+
+.social-share {
+	margin: 24px 0 0;
+
+	span {
+		text-transform: uppercase;
+		font-size: 0.85em;
+		font-family: poppins-regular;
+		display: block;
+		margin: 0 0 8px;
+		line-height: 100%;
+	}
+
+	ul {
+		padding: 0;
+
+		li {
+			margin: 0 4px 0 0;
+
+			a {
+				color: $white;
+				width: 30px;
+				height: 30px;
+				line-height: 32px;
+				display: inline-block;
+				vertical-align: middle;
+				text-align: center;
+				border-radius: 100%;
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+
+			&.fb {
+				a {
+					background-color: $facebook;
+				}
+			}
+
+			&.tw {
+				a {
+					background-color: $twitter;
+				}
+			}
+
+			&.pin {
+				a {
+					background-color: $pinterest;
+				}
+			}
+
+			&.gplus {
+				a {
+					background-color: $gplus;
+				}
+			}
+
+			&:last-child {
+				margin: 0;
+			}
 		}
 	}
 }

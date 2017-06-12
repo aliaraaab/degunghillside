@@ -92,6 +92,18 @@
 			}
 		}
 
+		.col-xs-6 {
+			padding: 0 8px 0 0;
+
+			&:last-child {
+				padding: 0 0 0 8px;
+			}
+		}
+
+		.input-text {
+			position: relative;
+		}
+
 		.help-block {
 			color: $red;
 			margin: 0;
@@ -109,6 +121,26 @@
 		&.has-error {
 			.form-control {
 				border-color: $red;
+			}
+
+			::-webkit-input-placeholder {
+				color: $red;
+			}
+
+			:-moz-placeholder {
+				color: $red;
+			}
+
+			::-moz-placeholder {
+				color: $red;
+			}
+
+			:-ms-input-placeholder {  
+				color: $red;
+			}
+
+			.icon-down {
+				color: $red;
 			}
 		}
 	}
