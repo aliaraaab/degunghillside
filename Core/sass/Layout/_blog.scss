@@ -74,6 +74,16 @@
 			}
 		}
 	}
+
+    .image-area {
+    	.gallery-image {
+    		.image {
+    			@include breakpoint(wide) {
+				    padding: 0 0 65%;
+				}
+    		}
+		}
+	}
 }
 
 
