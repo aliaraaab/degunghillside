@@ -9,7 +9,11 @@
 	$('.gallery-section .list-gallery-group .row').lightGallery({
 		thumbnail:true,
 		animateThumb: false,
-		showThumbByDefault: false
+		showThumbByDefault: false,
+		loadYoutubeThumbnail: true,
+		youtubeThumbSize: 'default',
+		loadVimeoThumbnail: true,
+		vimeoThumbSize: 'thumbnail_medium',
 	});
 
 })(jQuery);

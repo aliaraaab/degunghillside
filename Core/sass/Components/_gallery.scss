@@ -446,6 +446,30 @@
 		}
 	}
 
+	.vid-gallery {
+		.play-button {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			right: initial;
+			bottom: initial;
+			z-index: 0;
+			width: 64px;
+			height: 64px;
+			background: url('../img/play-button.png') center no-repeat;
+			background-size: contain;
+			transition: all 0.3s linear;
+			transform: translate(-50%, -50%);
+		}
+
+		&:hover {
+			.play-button {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+
 	.list-gallery-group {
 		margin: 2.25rem 0 0;
 
